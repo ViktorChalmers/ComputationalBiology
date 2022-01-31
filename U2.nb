@@ -1,0 +1,159 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5312,        149]
+NotebookOptionsPosition[      4736,        131]
+NotebookOutlinePosition[      5136,        147]
+CellTagsIndexPosition[      5093,        144]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"F", "[", "n_", "]"}], "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"r", "+", "1"}], ")"}], "*", 
+   RowBox[{"n", "/", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"n", "/", "K"}], ")"}], "^", "b"}]}], 
+     ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"F", "[", "n_", "]"}], "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"r", "+", "1"}], ")"}], "*", 
+      RowBox[{"n", "/", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"n", "/", "K"}], ")"}], "^", "b"}]}], ")"}]}]}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"F", "[", "x", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"K", ",", "2", ",", "3", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"b", ",", "3", ",", "4", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "3", ",", "4", ",", 
+     RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.8526292879408965`*^9, 3.852629333067058*^9}, {
+  3.852629374177249*^9, 3.8526294567832456`*^9}, {3.852629526412812*^9, 
+  3.852629547151708*^9}},ExpressionUUID->"3fa4a7ce-24f6-4ae7-8da2-\
+a72bdae0f612"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"1.1`", " ", "n"}], 
+  RowBox[{"1", "+", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox["n", "K"], ")"}], "b"]}]]], "Output",
+ CellChangeTimes->{3.852629334400217*^9, 3.8526294144904213`*^9, 
+  3.8526294576178045`*^9, 3.852629538806749*^9},
+ CellLabel->
+  "Out[304]=",ExpressionUUID->"a3dfff8c-7068-426a-ba63-a97e04d558f7"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b$$ = 3, K$$ = 2, $CellContext`r$$ = 3, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[K$$], 2, 3}, {
+      Hold[$CellContext`b$$], 3, 4}, {
+      Hold[$CellContext`r$$], 3, 4}}, Typeset`size$$ = {
+    360., {110., 114.92423344541825`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b$$ = 3, K$$ = 2, $CellContext`r$$ = 3}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ($CellContext`F[
+          Pattern[$CellContext`n$, 
+           Blank[]]] = ($CellContext`r$$ + 1) ($CellContext`n$/(
+          1 + ($CellContext`n$/K$$)^$CellContext`b$$)); Plot[
+         $CellContext`F[$CellContext`x], {$CellContext`x, 0, 10}]), 
+      "Specifications" :> {{
+        K$$, 2, 3, Appearance -> "Labeled"}, {$CellContext`b$$, 3, 
+         4}, {$CellContext`r$$, 3, 4}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{668., {141.13403328722342`, 146.86596671277658`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.852629334400217*^9, 3.8526294144904213`*^9, 
+  3.8526294576178045`*^9, 3.852629538843587*^9},
+ CellLabel->
+  "Out[305]=",ExpressionUUID->"12e9ffc9-08b0-4edc-abe3-af0b233fbf3e"]
+}, Open  ]]
+},
+WindowSize->{1141.2, 574.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"190e380e-5875-45c2-a5c7-bd45098231e9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1660, 49, 162, "Input",ExpressionUUID->"3fa4a7ce-24f6-4ae7-8da2-a72bdae0f612"],
+Cell[2243, 73, 369, 10, 58, "Output",ExpressionUUID->"a3dfff8c-7068-426a-ba63-a97e04d558f7"],
+Cell[2615, 85, 2105, 43, 307, "Output",ExpressionUUID->"12e9ffc9-08b0-4edc-abe3-af0b233fbf3e"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
