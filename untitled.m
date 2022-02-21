@@ -108,11 +108,15 @@ alpha = 0.01;
 n0 = 900;
 tEnd=300;
 eta = [n0];
+nSteps = 300
 Reta = zeros(100,30);
-Rlist = linspace(1,30,300);
-for j = 1:300
+Rlist = linspace(14,14.9,nSteps);
+xline(14.7796)
+%xline(12.51)
+%legend("sd","sd")
+hold on
+for j = 1:nSteps
 R = Rlist(j);
-
 for i=1:tEnd
     eta = [eta R*eta(end)*exp(-alpha*eta(end))];
 end
@@ -121,19 +125,27 @@ Reta(:,j) = eta(end-99:end);
 
 end
 scatter(Rlist,Reta,".","blue")
+xlabel("R")
+ylabel("\eta")
+title("Bifurcation diagram of \eta against R")
 %%
 %plot(eta(end-100:end))
 clc,clear,clf
 hold on
-Rlist=[5 10 13 22]
+Rlist=[5 10 24 13]
 alpha = 0.01
 n0 = 900
 for j=1:length(Rlist)
 eta = [n0]
 R = Rlist(j)
-for i=1:30
+for i=1:40
     eta = [eta R*eta(end)*exp(-alpha*eta(end))];
 end
 plot(eta)
 end
+xlabel("\tau")
+ylabel("\eta_\tau")
+
+legend("1-cycle, R = 5","2-cycle, R = 10","3-cycle, R = 24","4-cycle, R = 13")
+title("Plot of dynamics for different values of R")
 
